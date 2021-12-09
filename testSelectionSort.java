@@ -1,9 +1,6 @@
-import static org.junit.Assert.*;
-
+import org.junit.Test;
 import java.util.Arrays;
 
-import org.junit.Assert;
-import org.junit.Test;
 public class testSelectionSort {
 @Test
 public void test() {
@@ -37,9 +34,25 @@ testDuplicates();
     }
     
     public void testNegative(){
+    	int[] arr = new int[5];
+        arr[0] = -8;
+        arr[1] = -9;
+        arr[2] = -7;
+        arr[3] = -10;
+        arr[4] = -2;
         
-        /** Test data contains negative values only **/
+        int[] Sortedarr = new int[5];
+        Sortedarr[0] = -10;
+        Sortedarr[1] = -9;
+        Sortedarr[2] = -8;
+        Sortedarr[3] = -7;
+        Sortedarr[4] = -2;
+        
+        temp.basicSelectionSort(arr);
+        assert(Arrays.equals(arr, Sortedarr));
+
     }
+
     
     public void testMixed(){
         
